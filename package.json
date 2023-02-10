@@ -6,26 +6,38 @@
   "author": "Felype Fernandes <felype@cibus.app.br>",
   "license": "MIT",
   "dependencies": {
-    "@prisma/client": "4.10.1",
+    "@prisma/client": "^4.10.1",
     "body-parser": "^1.20.1",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "prisma": "^4.10.1",
     "ts-node": "^10.9.1"
   },
   "scripts": {
-    "build": "npx tsc",
     "start": "ts-node --transpile-only ./src/index.ts",
-    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/index.ts"
+    "dev": "ts-node-dev --files --watch src ./src/index.ts",
+    "build": "rimraf dist && tsc -p tsconfig.json",
+    "test": "jest"
   },
   "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-typescript": "^7.18.6",
+    "@faker-js/faker": "^7.6.0",
+    "@prisma-utils/prismerge": "^1.7.0",
     "@types/express": "^4.17.17",
+    "@types/jest": "^29.4.0",
     "@types/node": "^18.13.0",
     "@typescript-eslint/eslint-plugin": "^5.51.0",
     "@typescript-eslint/parser": "^5.51.0",
+    "babel-jest": "^29.4.2",
     "concurrently": "^7.6.0",
     "eslint": "^8.33.0",
+    "jest": "^29.4.2",
+    "jest-mock-extended": "2.0.4",
     "nodemon": "^2.0.20",
-    "prisma": "^4.10.1",
+    "prettier": "2.8.4",
+    "ts-jest": "^29.0.5",
     "ts-node-dev": "^2.0.0",
     "typescript": "^4.9.5"
   }

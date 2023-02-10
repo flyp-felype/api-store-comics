@@ -2,13 +2,13 @@
   "compilerOptions": {
     "outDir": "./dist",
     "rootDir": "./src",
-    "target": "es5",                         
-    "strictPropertyInitialization": false, 
-    "moduleResolution": "node",           
-    "esModuleInterop": true,  
-    "experimentalDecorators": true,       
-    "emitDecoratorMetadata": true,   
-    "skipLibCheck": true,                    
-    "forceConsistentCasingInFileNames": true  
+    "target": "es5",
+    "strictPropertyInitialization": false,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
   }
 }
