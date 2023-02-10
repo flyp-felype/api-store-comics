@@ -9,7 +9,7 @@ describe("Suite Test Comics", () => {
         prisma = new PrismaClient();
         comicsServices = new ComicsServices()
     });
-    it("List Comics", async () => {
+    it("Listar Comics", async () => {
         const comicsLists = await comicsServices.getList()
         const totalList = comicsLists ? comicsLists.length : 0
         expect(comicsLists.length).toBe(totalList)

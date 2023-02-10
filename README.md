@@ -4,6 +4,8 @@ API em Node com TypeScript.
 
 Para o banco foi escolhido o MySQL e o Prisma como ORM.
 
+## Repository Pattern
+
 A API foi construida respeitando as regras do Repository Pattern, sendo possível trocar o banco ou a fonte de dados sem impactar na regra de negócios da API.
 
 Dentro de src/reposistories/Prisma criei o Comics.ts com algumas funções básicas CRUD no banco.
