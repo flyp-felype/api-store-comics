@@ -1,6 +1,6 @@
 import { PrismaClient } from "@prisma/client";
-import { createComics } from "../mocks/integration/comics.data";
-import ComicsServices from "../services/ComicsServices";
+import { createComics } from "../../src/mocks/integration/comics.data";
+import ComicsServices from "../../src/services/ComicsServices";
 
 describe("Suite Test Comics", () => {
     let prisma: PrismaClient;
@@ -25,7 +25,6 @@ describe("Suite Test Comics", () => {
         const comics = createComics()
         const comicsSave = await comicsServices.save(comics)
         const id = comicsSave ? comicsSave.id : 0
-        console.log('ID ', id)
         const remover = await comicsServices.remove(id)
 
         expect(remover.id).toBe(id)
@@ -35,8 +34,8 @@ describe("Suite Test Comics", () => {
         const comics = createComics()
         const comicsSave = await comicsServices.save(comics)
         const comicGet = await comicsServices.getById(comicsSave.id)
-        console.log('comicGet ', comicGet)
-        if(comicGet.id)
+        if (comicGet.id) {
             expect(comicGet.id).toBe(comicGet.id)
+        }
     })
 });
