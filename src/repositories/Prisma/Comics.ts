@@ -21,6 +21,14 @@ export class CosmicRepository {
     }
 
     async remove(id: number) {
-        return await this.db.comics.delete({ where: { id } })
+        console.log('ID ', id)
+        const comic = await this.db.comics.findUnique({ where: { id } })
+        if (comic) {
+
+            return await this.db.comics.delete({ where: { id } })
+        }
+        else {
+            throw new Error('Não encontramos uma Comics com este ID')
+        }
     }
 }
