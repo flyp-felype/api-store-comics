@@ -1,0 +1,28 @@
+{
+  "name": "api-store-comics",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:flyp-felype/api-store-comics.git",
+  "author": "Felype Fernandes <felype@cibus.app.br>",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "4.10.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "ts-node": "^10.9.1"
+  },
+  "scripts": {
+    "build": "npx tsc",
+    "start": "ts-node --transpile-only ./src/index.ts",
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/index.ts"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.13.0",
+    "concurrently": "^7.6.0",
+    "nodemon": "^2.0.20",
+    "prisma": "^4.10.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.9.5"
+  }
+}
