@@ -19,3 +19,14 @@ Para testes configurei o JEST e criei alguns testes de integração, para valida
 O teste consome um mock que cria dados fake e envia para os services, validando assim se o fluxo de dados vai estar correto.
 
 ![alt text](https://github.com/flyp-felype/api-store-comics/blob/main/test.png?raw=true)
+
+## ToDo List
+
+- [x] Criar API
+- [x] Configurar TypeScript
+- [x] Prisma ORM
+- [x] Criar Repositories
+- [x] Criar Services
+- [x] Criar Controller
+- [ ] Criar Middleware Auth Token
+- [x] Criar Tests
